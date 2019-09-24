@@ -1,0 +1,11 @@
+src/node_modules/**/*
+src/.expo/*
+src/npm-debug.*
+src/*.jks
+src/*.p8
+src/*.p12
+src/*.key
+src/*.mobileprovision
+src/*.orig.*
+src/web-build/
+src/web-report/
