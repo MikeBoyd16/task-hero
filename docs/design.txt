@@ -1,0 +1,129 @@
+App Name: Task Hero
+
+App style notes: 
+	- All screens have an off-white background
+	- Header and footer backgrounds are transparent
+	- Content backgrounds are the same color as the screen background, but have border shadows
+
+Screens:
+Home
+	Header
+		- First line
+			- Label 'Task Hero'
+		- Second line 
+			- Label: The user's name
+			- Label: The profile level
+			- Status bar: Current EXP progress
+		
+	Content
+		- Button 'Tasks'
+			- Styles
+				- Color: Dark gray
+			- Actions
+				- Links to the 'Tasks' screen
+		- Button 'Goals'
+			- Styles
+				- Color: Dark gray
+			-Actions
+				- Links to the 'Goals' screen
+	Footer
+		- Label
+			- Styles
+				- Color: Dark gray
+				- Text: Trademark
+Tasks
+	Header
+		- Label
+			- Styles
+				- Color: Blue
+				- Text: 'Tasks'
+	Content
+		- List: Expandable colored boxes (color based on task difficulty) containing task name and exp
+			- Box color code:
+				- Easy is green
+				- Medium is orange
+				- Hard is red
+	Footer
+		- Button '+'
+			- Styles
+				- Shape: Circle
+				- Color: Blue
+			- Actions
+				- Links to the 'Add Task' screen
+Add Task
+	Header
+		- Label: Task
+	Content 
+		- Text Field: The task name
+		- Combobox: A list of all active goals
+		- Combobox: 'Difficulty'
+			- Easy (125 EXP)
+			- Normal (250 EXP)
+			- Hard (500 EXP)
+	Footer
+		- Button 'Finish'
+			- Styles
+				- Shape: Rectangle
+				- Color: Blue
+			- Actions
+				- Links to the 'Tasks' screen
+				- Creates a new task
+		- Button 'Cancel'
+			- Styles
+				- Shape: Rectangle
+				- Color: Blue
+			- Actions
+				- Links to the 'Tasks' screen
+Goals
+	Header
+		- Label: Goals
+	Content
+		- List: Expandable colored boxes (color based on goal duration)
+			- Box color code:
+				- Short is green
+				- Average is orange
+				- Long is red
+			- Unexpanded: Contains goal name
+			- Expanded: 
+				- Label: campaign name, 
+				- Label: exp for completion
+				- Button 'Complete'
+					- Fades the box and moves it below incomplete goals.
+					- Adds the EXP reward amount to the profile's total EXP
+					- Only enabled when there are no associated tasks active
+				- Button 'Remove'
+					- Permanantly removes the goal from the list
+	Footer
+		- Button '+'
+			- Styles
+				- Shape: Circle
+				- Color: Blue
+			- Action
+				- Links to the 'Add Goal' screen
+Add Goal
+	Header
+		- Label: Goal
+	Content 
+		- Text Field: The goal name
+		- Combobox
+			- Styles
+				- Text: 'Duration'
+			- Actions
+				- Options
+					- 'Short' (awards 500 EXP)
+					- 'Average' (awards 1000 EXP)
+					- 'Long' (awards 3000 EXP)
+	Footer
+		- Button 'Finish'
+			- Styles
+				- Shape: Rectangle
+				- Color: Blue
+			- Actions
+				- Links to the 'Goals' screen
+				- Creates a new goal
+		- Button 'Cancel'
+			- Styles
+				- Shape: Rectangle
+				- Color: Blue
+			- Actions
+				- Link to 'Goals' screen. Does not create a new goal.
